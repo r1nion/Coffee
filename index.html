@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="mode-selection">
+        <label>
+            <input type="radio" name="calculation-mode" value="calculate-beans" checked>
+            <span>Beans and Water from Brew Volume</span>
+        </label>
+        <label>
+            <input type="radio" name="calculation-mode" value="calculate-brew-volume">
+            <span>Brew Volume and Water from Beans</span>
+        </label>
+    </div>
+
+    <div id="input-group-calculate-beans" class="input-group">
+        <label for="input-volume">Brew Volume (ml):</label>
+        <input type="number" id="input-volume" value="150" min="1">
+    </div>
+
+    <div id="input-group-calculate-brew-volume" class="input-group" style="display: none;">
+        <label for="input-beans">Coffee Beans (g):</label>
+        <input type="number" id="input-beans" value="10" min="1">
+    </div>
+
+    <div class="input-group">
+        <label for="input-ratio">Ratio (R):</label>
+        <input type="number" id="input-ratio" value="15.5" min="3" step="0.1">
+    </div>
+
+    <div class="output-group">
+        <span id="output-beans" class="output-item"></span>
+        <span id="output-brew-volume" class="output-item"></span>
+        <span id="output-water-mr" class="output-item"></span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
